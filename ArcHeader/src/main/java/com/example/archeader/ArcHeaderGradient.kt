@@ -17,16 +17,24 @@ class ArcHeaderGradient @JvmOverloads constructor(
     var arcHeight = 0f
         set(value) {
             field = value
+
+            resetPathDimensions()
             invalidate()
         }
     var headerColorStart = getDefaultHeaderGradientStartColor()
         set(value) {
             field = value
+
+            resetPaintGradientParameters()
             invalidate()
+
+
         }
     var headerColorEnd = getDefaultHeaderGradientEndColor()
         set(value) {
             field = value
+
+            resetPaintGradientParameters()
             invalidate()
         }
 
@@ -44,34 +52,41 @@ class ArcHeaderGradient @JvmOverloads constructor(
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
-        path.reset()
-        path.lineTo(0f, (h - (arcHeight / 2)))
-        path.rCubicTo(
-            0f,
-            0f,
-            (w.toFloat() / 2),
-            arcHeight,
-            w.toFloat(),
-            0f
-        )
-        path.lineTo(width.toFloat(), 0f)
-        path.close()
-
-        paint.shader = LinearGradient(
-            0f,
-            h.toFloat(),
-            w.toFloat(),
-            0f,
-            headerColorStart,
-            headerColorEnd,
-            Shader.TileMode.MIRROR
-        )
+        resetPathDimensions(h, w)
+        resetPaintGradientParameters(h, w)
 
         super.onSizeChanged(w, h, oldw, oldh)
     }
 
     override fun onDraw(canvas: Canvas?) {
         canvas?.drawPath(path, paint)
+    }
+
+    private fun resetPaintGradientParameters(height: Int = getHeight(), width: Int = getWidth()) {
+        paint.shader = LinearGradient(
+            0f,
+            height.toFloat(),
+            width.toFloat(),
+            0f,
+            headerColorStart,
+            headerColorEnd,
+            Shader.TileMode.MIRROR
+        )
+    }
+
+    private fun resetPathDimensions(height: Int = getHeight(), width: Int = getWidth()) {
+        path.reset()
+        path.lineTo(0f, (height - (arcHeight / 2)))
+        path.rCubicTo(
+            0f,
+            0f,
+            (width.toFloat() / 2),
+            arcHeight,
+            width.toFloat(),
+            0f
+        )
+        path.lineTo(width.toFloat(), 0f)
+        path.close()
     }
 
     private fun getDefaultHeaderGradientStartColor() = ContextCompat.getColor(context, R.color.header_color_gradient_start_default)

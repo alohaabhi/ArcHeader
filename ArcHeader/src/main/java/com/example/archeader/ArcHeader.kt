@@ -49,6 +49,10 @@ class ArcHeader @JvmOverloads constructor(
         super.onSizeChanged(w, h, oldw, oldh)
     }
 
+    override fun onDraw(canvas: Canvas?) {
+        canvas?.drawPath(path, paint)
+    }
+
     private fun resetPathDimensions(height: Int = getHeight(), width: Int = getWidth()) {
         path.reset()
         path.lineTo(0f, (height - (arcHeight / 2)))
@@ -62,10 +66,6 @@ class ArcHeader @JvmOverloads constructor(
         )
         path.lineTo(width.toFloat(), 0f)
         path.close()
-    }
-
-    override fun onDraw(canvas: Canvas?) {
-        canvas?.drawPath(path, paint)
     }
 
     private fun getDefaultHeaderColor() = ContextCompat.getColor(context, R.color.header_color_default)
