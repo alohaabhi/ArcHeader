@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="header_color_default">#000000</color>
+    <color name="header_color_gradient_start_default">#BE93C5</color>
+    <color name="header_color_gradient_end_default">#7BC6CC</color>
 </resources>

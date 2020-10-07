@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CommonAttributes">
+        <attr name="arc_height" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ArcHeader" parent="CommonAttributes">
+        <attr name="arc_height" />
+        <attr name="header_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ArcHeaderGradient" parent="CommonAttributes">
+        <attr name="arc_height" />
+        <attr name="header_color_start" format="color" />
+        <attr name="header_color_end" format="color" />
+    </declare-styleable>
+</resources>
