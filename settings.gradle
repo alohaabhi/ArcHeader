@@ -1,2 +1,3 @@
+include ':ArcHeader'
 include ':app'
 rootProject.name = "ArcHeaderDemo"
