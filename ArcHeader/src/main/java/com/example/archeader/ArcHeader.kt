@@ -17,11 +17,15 @@ class ArcHeader @JvmOverloads constructor(
     var arcHeight = 0f
         set(value) {
             field = value
+
+            resetPathDimensions()
             invalidate()
         }
     var headerColor = getDefaultHeaderColor()
         set(value) {
             field = value
+
+            paint.color = value
             invalidate()
         }
 
@@ -38,22 +42,26 @@ class ArcHeader @JvmOverloads constructor(
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
-        path.reset()
-        path.lineTo(0f, (h - (arcHeight / 2)))
-        path.rCubicTo(
-            0f,
-            0f,
-            (w.toFloat() / 2),
-            arcHeight,
-            w.toFloat(),
-            0f
-        )
-        path.lineTo(width.toFloat(), 0f)
-        path.close()
+        resetPathDimensions(h, w)
 
         paint.color = headerColor
 
         super.onSizeChanged(w, h, oldw, oldh)
+    }
+
+    private fun resetPathDimensions(height: Int = getHeight(), width: Int = getWidth()) {
+        path.reset()
+        path.lineTo(0f, (height - (arcHeight / 2)))
+        path.rCubicTo(
+            0f,
+            0f,
+            (width.toFloat() / 2),
+            arcHeight,
+            width.toFloat(),
+            0f
+        )
+        path.lineTo(width.toFloat(), 0f)
+        path.close()
     }
 
     override fun onDraw(canvas: Canvas?) {
