@@ -4,5 +4,6 @@
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#e25822</color>
     <color name="header_color_fire">#e25822</color>
-    <color name="title_color">#FFFFFF</color>
+    <color name="title_color">#000000</color>
+    <color name="header_text_color">#FFFFFF</color>
 </resources>

@@ -6,26 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.example.archeader.ArcHeaderGradient
-        android:id="@+id/arc_header"
-        android:layout_width="0dp"
-        android:layout_height="400dp"
-        app:arc_height="40dp"
-        app:header_color="@color/header_color_fire"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
+        android:text="Hello there 👋"
         android:textColor="@color/title_color"
         android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="@id/arc_header"
+        app:layout_constraintBottom_toTopOf="@id/btn_open_arc_header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_open_arc_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Arch Header with Solid background"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/btn_open_arc_header_gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <Button
+        android:id="@+id/btn_open_arc_header_gradient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Arch Header with Gradient background"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_open_arc_header" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
