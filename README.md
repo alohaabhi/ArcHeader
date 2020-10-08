@@ -1,8 +1,10 @@
-# Hello there 👋
+# ArcHeader
+[![](https://jitpack.io/v/iabhishek1041/ArcHeader.svg)](https://jitpack.io/#iabhishek1041/ArcHeader)
 
 A lot of apps these days have a header at the top with a curved bottom edge, some have a gradient, some are solid and some even animate the curvature with scroll.
 
-With ArcHeader you can also do all of that and make your app look great! Follow along to know about how it works and the customizations available 👇
+With ArcHeader you can also do all of that and make your app look great! 
+You can clone this repository to try out the demo app. Or Follow along to know about how it works and the customizations available 👇
 
 ### Available Types
 
@@ -96,9 +98,3 @@ This one supports a gradient as the background along with the direction as well.
     1. Top left to bottom right
     1. Left to right
     1. Bottom Left to top right
-
-### How can you get it
-
-* Follow the instructions here to add it to your project [![](https://jitpack.io/v/iabhishek1041/ArcHeader.svg)](https://jitpack.io/#iabhishek1041/ArcHeader)
-
-* You can also clone and build this repo to try out the demo app.
