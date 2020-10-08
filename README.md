@@ -2,7 +2,7 @@
 
 A lot of apps these days have a header at the top with a curved bottom edge, some have a gradient, some are solid and some even animate the curvature with scroll.
 
-With ArcHeader you can also do all of that and make your app look great! Follow along to know about how it works and he customizations available 👇
+With ArcHeader you can also do all of that and make your app look great! Follow along to know about how it works and the customizations available 👇
 
 ### Available Types
 
