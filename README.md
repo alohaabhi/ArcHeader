@@ -15,7 +15,7 @@ You can clone this repository to try out the demo app. Or Follow along to know a
 This is the simpler version where you can set solid background color.
 
 ```
-<com.example.archeader.ArcHeader
+<com.iabhishek1041.archeader.ArcHeader
 android:layout_width="match_parent"
 android:layout_height="400dp"
 app:arc_height="40dp"
@@ -49,7 +49,7 @@ app:header_color="@color/header_color_fire"/>
 
 This one supports a gradient as the background along with the direction as well.
 ```
-<com.example.archeader.ArcHeaderGradient
+<com.iabhishek1041.archeader.ArcHeaderGradient
     android:id="@+id/arc_header"
     android:layout_width="0dp"
     android:layout_height="400dp"
