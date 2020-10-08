@@ -8,7 +8,7 @@ With ArcHeader you can also do all of that and make your app look great! Follow 
 
 #### 1. ArcHeader
 
-[GIF]
+![](archeader.gif)
 
 This is the simpler version where you can set solid background color.
 
@@ -43,7 +43,7 @@ app:header_color="@color/header_color_fire"/>
 
 #### 2.  ArcHeaderGradient
 
-[GIF]
+![](archeadergradient.gif)
 
 This one supports a gradient as the background along with the direction as well.
 ```
