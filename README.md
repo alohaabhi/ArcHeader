@@ -96,3 +96,7 @@ This one supports a gradient as the background along with the direction as well.
     1. Top left to bottom right
     1. Left to right
     1. Bottom Left to top right
+
+### How to install
+
+Follow the instructions here [![](https://jitpack.io/v/iabhishek1041/ArcHeader.svg)](https://jitpack.io/#iabhishek1041/ArcHeader)
